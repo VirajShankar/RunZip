@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-Utility script for encoding a file using Huffman coding.
+Utility script for encoding a file using rle coding.
 Usage: python encode_file.py <input_file> <output_file>
 """
 
 import sys
 import os
-from huffman import encode_file
+from rle import encode_file
 
 def main():
     # Check command-line arguments
@@ -21,7 +21,7 @@ def main():
         print(f"Error: Input file '{input_file}' not found")
         return 1
     
-    print(f"Encoding file {input_file} using Huffman coding...")
+    print(f"Encoding file {input_file} using rle coding...")
     try:
         output_path = encode_file(input_file, output_file)
         print(f"File encoded successfully: {output_path}")

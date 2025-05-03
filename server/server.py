@@ -44,7 +44,7 @@ def decode_received_file(encoded_file_path):
         decode_script = os.path.join(project_root, 'utils', 'decode_file.py')
         
         # Run the decoding script
-        print(f"Decoding file using Huffman coding...")
+        print(f"Decoding file using rle coding...")
         print(f"Running: python3 {decode_script} {encoded_file_path} {decoded_path}")
         
         result = subprocess.run(

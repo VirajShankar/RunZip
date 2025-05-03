@@ -8,15 +8,15 @@ import subprocess
 
 # Add the parent directory to sys.path to import the utils module
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from utils.huffman import encode_data
+from utils.rle import encode_data, decode_data
 
 # Configuration variables from environment
 SERVER_IP = '192.168.116.105' 
 PORT = 9999  
 # Corrected file path
-FILE_PATH = r"C:\Users\viraj\Documents\CN Mini Project\HuffStream\client\sending_files\sample.txt"
+FILE_PATH = r"C:\Users\viraj\Documents\CN Mini Project\FILE TRANSFER SYSTEM\client\sending_files\sample.txt"
 def send_encoded_file(host, port, file_path):
-    """Encode a file using Huffman coding and send it to the server."""
+    """Encode a file using rle coding and send it to the server."""
     # Create a socket
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     
@@ -30,7 +30,7 @@ def send_encoded_file(host, port, file_path):
             file_data = f.read()
         
         # Encode the data in memory
-        print(f"Encoding file using Huffman coding...")
+        print(f"Encoding file using rle coding...")
         encoded_data, compression_ratio = encode_data(file_data)
         
         # Get the filename for the encoded version
