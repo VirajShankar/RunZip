@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define variables
-SSL_DIR="/Users/karanm/HuffStream/ssl"
+SSL_DIR="C:\Users\viraj\Documents\CN Mini Project\HuffStream\ssl"
 CERT_FILE="$SSL_DIR/server.crt"
 KEY_FILE="$SSL_DIR/server.key"
 DAYS_VALID=365
